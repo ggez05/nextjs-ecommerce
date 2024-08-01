@@ -4,7 +4,7 @@
 
 - Admin Dashboard is only accessible to you if you clone it you can't Signup for Admin Account I have added dummy Product and categories
 
-#### multi User Login System
+#### Multi User Login System
 
 - SignIn / SignUp ✔
 - Forget Password ✔
@@ -78,7 +78,7 @@ Install my-project with npm
   npm run preview (To View Production Server )
 ```
 
-PICTURES
+### PICTURES
 
 - User Landing Desktop
 ![image](https://github.com/user-attachments/assets/858bd3ae-e1b4-466a-93d8-7699af940922)
