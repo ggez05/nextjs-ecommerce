@@ -87,7 +87,7 @@ export default function Dashboard() {
       <AdminSidebar />
       <div className="w-full h-full ">
         <AdminNavbar />
-        <div className="w-full h-5/6  flex flex-wrap items-start justify-center overflow-y-auto  px-4 py-2">
+        <div className="w-full h-5/6 flex flex-wrap items-center justify-center overflow-y-auto  px-2 py-4">
           {categoryLoading || productLoading ? <Loading /> : <SuperComponent />}
         </div>
       </div>
