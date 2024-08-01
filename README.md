@@ -112,7 +112,7 @@ Install my-project with npm
 ![image](https://github.com/user-attachments/assets/a382d2b9-95bb-4915-ad8f-8715ec31d25a)
 
 - Admin Dashboard
-![image](https://github.com/user-attachments/assets/196265fa-48f0-466b-a16a-c5f4b05a419a)
+![image](https://github.com/user-attachments/assets/d5058fe9-b7b4-4eef-ab01-5bfb40818892)
 
 - Add Product
 ![image](https://github.com/user-attachments/assets/75bd8f72-1073-4614-bf3e-fa5b12c54c9a)
@@ -129,4 +129,12 @@ Install my-project with npm
 - Pending Orders
 ![image](https://github.com/user-attachments/assets/746c1e4a-bbce-40fc-90a6-2c05c1064d84)
 
+- Update Category 
+![image](https://github.com/user-attachments/assets/13f6e156-612f-4d49-96ac-feb7fe77e132)
+
+- Update Product
+![image](https://github.com/user-attachments/assets/59a6153e-5b28-4510-910d-2d065223bd45)
+
+- Completed Orders
+![image](https://github.com/user-attachments/assets/4ced91ab-fe64-4322-811a-93de1bbbd50b)
 
