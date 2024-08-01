@@ -78,6 +78,8 @@ Install my-project with npm
   npm run preview (To View Production Server )
 ```
 
+PICTURES
+
 - User Landing Desktop
 ![image](https://github.com/user-attachments/assets/858bd3ae-e1b4-466a-93d8-7699af940922)
 
