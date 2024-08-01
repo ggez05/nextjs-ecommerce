@@ -1,35 +1,30 @@
-"use Client"
+"use Client";
 
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 
-import { useSWRConfig } from "swr"
-import DataTable from 'react-data-table-component';
-import { useSelector } from 'react-redux';
-import { RootState } from '@/Store/store';
-import { useRouter } from 'next/navigation';
-
-
-
+import { RootState } from "@/Store/store";
+import { useRouter } from "next/navigation";
+import DataTable from "react-data-table-component";
+import { useSelector } from "react-redux";
+import { useSWRConfig } from "swr";
 
 type ProductData = {
-  _id: string,
-  productName: string,
-  productDescription: string,
-  productImage: string,
-  productSlug: string,
-  productPrice: Number,
-  productQuantity: Number,
-  productFeatured: Boolean,
+  _id: string;
+  productName: string;
+  productDescription: string;
+  productImage: string;
+  productSlug: string;
+  productPrice: Number;
+  productQuantity: Number;
+  productFeatured: Boolean;
   productCategory: {
-    _id: string,
-    categoryName: string,
-    categorySlug: string
-  },
+    _id: string;
+    categoryName: string;
+    categorySlug: string;
+  };
   createdAt: string;
   updatedAt: string;
 };
-
-
 
 interface Order {
   createdAt: string;
@@ -80,102 +75,93 @@ interface Order {
   _id: string;
 }
 
-
-
 export default function OrdersDetailsDataTable() {
-  const { mutate } = useSWRConfig()
+  const { mutate } = useSWRConfig();
   const router = useRouter();
   const [orderData, setOrderData] = useState<Order[] | []>([]);
-  const data = useSelector((state: RootState) => state.Order.order) as Order[] | [];
-  const [search, setSearch] = useState('');
+  const data = useSelector((state: RootState) => state.Order.order) as
+    | Order[]
+    | [];
+  const [search, setSearch] = useState("");
   const [filteredData, setFilteredData] = useState<Order[] | []>([]);
 
-
   useEffect(() => {
-    setOrderData(data)
-  }, [data])
+    setOrderData(data);
+  }, [data]);
 
   useEffect(() => {
     setFilteredData(orderData);
-  }, [orderData])
-
-
-
-
-
-
+  }, [orderData]);
 
   const columns = [
     {
-      name: 'Order ID',
+      name: "Order ID",
       selector: (row: Order) => row?._id,
       sortable: true,
     },
     {
-      name: 'Total Price',
+      name: "Total Price",
       selector: (row: Order) => row?.totalPrice,
       sortable: true,
     },
     {
-      name: 'Delivered',
-      selector: (row: Order) => row?.isDelivered ? 'Yes' : 'No',
+      name: "Delivered",
+      selector: (row: Order) => (row?.isDelivered ? "Yes" : "No"),
       sortable: true,
     },
     {
-      name: 'Action',
+      name: "Action",
       cell: (row: Order) => (
-
-        <button onClick={() => router.push(`/order/view-orders-details/${row?._id}`)} className=' w-20 py-2 mx-2 text-xs text-green-600 hover:text-white my-2 hover:bg-green-600 border border-green-600 rounded transition-all duration-700'>Details</button>
-
-      )
+        <button
+          onClick={() => router.push(`/order/view-orders-details/${row?._id}`)}
+          className=" w-20 py-2 mx-2 text-xs text-green-600 hover:text-white my-2 hover:bg-green-600 border border-green-600 rounded transition-all duration-700"
+        >
+          Details
+        </button>
+      ),
     },
-
   ];
 
-
-
-
-
-
   useEffect(() => {
-    if (search === '') {
+    if (search === "") {
       setFilteredData(orderData);
     } else {
-      setFilteredData(orderData?.filter((item) => {
-        const itemData = item?._id?.toUpperCase();
-        const textData = search.toUpperCase();
-        return itemData.indexOf(textData) > -1;
-      }))
+      setFilteredData(
+        orderData?.filter((item) => {
+          const itemData = item?._id?.toUpperCase();
+          const textData = search.toUpperCase();
+          return itemData.indexOf(textData) > -1;
+        })
+      );
     }
-  }, [search, orderData])
-
-
+  }, [search, orderData]);
 
   return (
-    <div className='w-full h-full'>
+    <div className="w-full h-full">
       <DataTable
         columns={columns}
         data={filteredData || []}
-        key={'ThisOrdersData'}
+        key={"ThisOrdersData"}
         pagination
         keyField="id"
         title={`Orders list`}
         fixedHeader
-        fixedHeaderScrollHeight='700px'
+        fixedHeaderScrollHeight="700px"
         selectableRows
         selectableRowsHighlight
         persistTableHead
         subHeader
         subHeaderComponent={
-          <input className='w-60 dark:bg-transparent py-2 px-2  outline-none  border-b-2 border-orange-600' type={"search"}
+          <input
+            className="w-60 dark:bg-transparent py-2 px-2  outline-none  border-b-2 border-orange-600"
+            type={"search"}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder={"Orders ID"} />
+            placeholder={"Orders ID"}
+          />
         }
         className="bg-white px-4 h-5/6 "
       />
-
     </div>
-  )
+  );
 }
-
