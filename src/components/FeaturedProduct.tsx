@@ -35,9 +35,9 @@ export default function FeaturedProduct() {
   const filteredProducts = FeaturedProducts?.slice(0, 9);
 
   return (
-    <div className="w-full bg-gray-50 text-black  flex items-center flex-col pb-10 justify-start">
+    <div className="w-full bg-neutral-800 text-black  flex items-center flex-col pb-10 justify-start">
       <div className="flex items-center justify-center mt-10 px-2 py-2 mb-2">
-        <h1 className="py-2 px-4 border-x-2 border-none font-semibold text-2xl ">
+        <h1 className="py-2 px-4 border-x-2 border-none font-semibold text-3xl text-white ">
           Top Products
         </h1>
       </div>

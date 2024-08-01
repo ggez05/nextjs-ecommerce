@@ -18,7 +18,7 @@ export default function CategoryCard({
 }: CategoryData) {
   const router = useRouter();
   return (
-    <div className="card card-compact text-black cursor-pointer m-3 w-80 bg-gray-50 shadow-xl relative">
+    <div className="card card-compact text-black cursor-pointer m-3 w-80 bg-gray-50 shadow-xl relativ">
       <div className="w-full rounded-t-lg relative h-60">
         <Image
           src={categoryImage || "/images98.jpg"}

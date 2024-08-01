@@ -25,12 +25,12 @@ export default function Hero({ setRatio }: IProps) {
           fill
         />
       </div>
-      <h1 className="mb-2 text-5xl text-orange-400 z-10 font-semibold pb-8">
-        Get what you want, at the lowest prices!
+      <h1 className="mb-14 md:mb-32 text-4xl md:text-5xl md:text-black  text-white z-10 font-semibold pb-8">
+        Get what you want, <br /> at the lowest prices!
       </h1>
       <Link
         href={"/#my-Categories"}
-        className="border pt-5 pb-5 rounded-xl bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 border-none  text-white hover:bg-gradient-to-br w-40 text-2xl  z-40"
+        className="border pt-5 pb-5 rounded-xl bg-gradient-to-r from-red-300 via-red-400 to-red-600 border-none  text-white hover:bg-gradient-to-br w-40 text-2xl  z-40"
       >
         Shop Now
       </Link>
