@@ -51,7 +51,7 @@ More Functionality will be added with time
 - Typescript
 - tailwind css
 - Redux toolkit
-- joi validation
+- jwt validation
 - mongoDB
 - SWR hooks for fetching API
 
