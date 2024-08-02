@@ -1,5 +1,4 @@
 # ECommerce Store
-## Made using NextJS 
 
 # Features
 
