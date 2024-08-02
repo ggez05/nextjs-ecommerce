@@ -2,14 +2,14 @@
 
 # Features
 
-## Multi User Login System
+## Multi-User Login System
 
 - SignIn / SignUp ✔
 - Forget Password ✔
 - JWT validation on each Authorized Request ✔
 - Authorization validation for Admin Access and Customer Access ✔
 
-## ADMIN PANEL
+## Admin Panel
 
 - Add a product ✔
 - view Product ✔
