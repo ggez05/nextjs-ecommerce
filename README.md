@@ -1,4 +1,4 @@
-# ECommerce Store
+# Full Stack E-Commerce Store
 
 # Features
 
