@@ -1,13 +1,16 @@
-## Features
+# ECommerce Store
+## Made using NextJS 
 
-# Multi User Login System
+# Features
+
+## Multi User Login System
 
 - SignIn / SignUp ✔
 - Forget Password ✔
 - JWT validation on each Authorized Request ✔
 - Authorization validation for Admin Access and Customer Access ✔
 
-# ADMIN PANEL
+## ADMIN PANEL
 
 - Add a product ✔
 - view Product ✔
@@ -23,7 +26,7 @@
 - Pending Order List ✔
 - Completed Order List ✔
 
-# Customer
+## Customer
 
 - View Product & Category ✔
 - view product related to specific category ✔
